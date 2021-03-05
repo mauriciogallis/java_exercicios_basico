@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.util.Scanner;
+
 public class SubtrairPercentual {
 
     /**
@@ -6,5 +9,12 @@ public class SubtrairPercentual {
      **/
 
     public static void main(String[] args) {
+        System.out.print("Digite o valor do item: ");
+        Scanner scan = new Scanner(System.in);
+        BigDecimal valor =  new BigDecimal(scan.nextInt());
+        System.out.print("Digite o percentual de desconto: ");
+        scan = new Scanner(System.in);
+        BigDecimal desconto =  new BigDecimal(scan.nextInt());
+        System.out.println("Total com desconto aplicado: "+valor.subtract(valor.divide(new BigDecimal(100)).multiply(desconto)));
     }
 }

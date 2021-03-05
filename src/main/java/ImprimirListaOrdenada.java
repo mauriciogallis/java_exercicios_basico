@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.stream.Stream;
+
 public class ImprimirListaOrdenada {
 
     /**
@@ -5,6 +8,9 @@ public class ImprimirListaOrdenada {
      **/
 
     public static void main(String[] args) {
+        System.out.println("Digite os nomes: ");
+        String nomes = new Scanner(System.in).next();
+        Stream.of(nomes.split(",")).sorted().forEach(System.out::println);
     }
 
 

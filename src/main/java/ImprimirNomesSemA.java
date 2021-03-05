@@ -6,7 +6,7 @@ public class ImprimirNomesSemA {
     private static List<String> nomes = new ArrayList<>();
 
     static {
-        nomes.add("Fernando");
+        nomes.add("Mauricio");
         nomes.add("Roger");
         nomes.add("Mario");
         nomes.add("Fred");
@@ -21,6 +21,7 @@ public class ImprimirNomesSemA {
      */
 
     public static void main(String[] args) {
+        nomes.stream().filter(s -> !s.contains("a")).forEach(System.out::println);
     }
 
 
